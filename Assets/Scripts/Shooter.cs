@@ -98,9 +98,14 @@ public class Shooter : MonoBehaviour
 
 	public void Shoot()
 	{
-		if (currentBubble == null) CreateNextBubble();
+		if (currentBubble == null)
+		{
+			CreateNextBubble();
+		}
+		
 		ScoreManager.GetInstance().AddThrows();
 		AudioManager.instance.PlaySound("shoot");
+		
 		transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
 		currentBubble.transform.rotation = transform.rotation;
 		currentBubble.GetComponent<CircleCollider2D>().enabled = true;

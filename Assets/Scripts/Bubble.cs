@@ -14,6 +14,7 @@ public class Bubble : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		//if it will collide with a bubble that is fixed or collide with a boundry of scene
 		if ((collision.gameObject.tag == "Bubble" && collision.gameObject.GetComponent<Bubble>().isFixed) || collision.gameObject.tag == "Limit")
 		{
 			if (!isFixed)

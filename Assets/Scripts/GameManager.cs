@@ -182,6 +182,7 @@ public class GameManager : MonoBehaviour
 
 	public void ProcessTurn(Transform currentBubble)
 	{
+		Debug.Log("turn");
 		StartCoroutine(CheckSequence(currentBubble));
 	}
 
